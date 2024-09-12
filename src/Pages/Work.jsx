@@ -1,6 +1,6 @@
 import MarqueeLogo from "../Components/MarqueeLogo";
 import Navbar from "../Components/Navbar";
-import WorkHero from "../Components/workHero";
+import WorkHero from "../Components/WorkHero";
 import WorkShowcase from "../Components/WorkShowcase";
 import ReachOut from "../Components/ReachOut";
 import Footer from "../Components/Footer";
