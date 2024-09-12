@@ -1,0 +1,148 @@
+@import url(https://fonts.googleapis.com/css?family=Syne:regular,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Archivo:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Archivo";
+  cursor: none;
+}
+
+/* scrollbar & selection ---------------------------  */
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #a270c9, #637eb2);
+  border-radius: 10px;
+}
+
+::selection {
+  background-color: #a270c9;
+  color: white;
+}
+
+/* From Uiverse.io theme toggle btn */
+.theme-checkbox {
+  --toggle-size: 7.5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 5.2em;
+  height: 3.125em;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(50%, #efefef),
+      color-stop(50%, #2a2a2a)
+    )
+    no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 0;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 99em;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--toggle-size);
+}
+
+.theme-checkbox::before {
+  content: "";
+  width: 2.25em;
+  height: 2.25em;
+  position: absolute;
+  top: 0.438em;
+  left: 0.438em;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(50%, #efefef),
+      color-stop(50%, #2a2a2a)
+    )
+    no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 100%;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+  left: calc(100% - 2.25em - 0.438em);
+  background-position: 0;
+}
+
+.theme-checkbox:checked {
+  background-position: 100%;
+}
+
+/* active-------------  */
+.active {
+  background: linear-gradient(to right, #a270c9, #637eb2);
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text color transparent */
+  font-weight: 600;
+}
+
+.text-gradient-css {
+  background: linear-gradient(to right, #593bbe, #226be1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gradient-css {
+  border-image: linear-gradient(to right, #7e5bef, #3b82f6) 1;
+}
+
+.border-gradient-css:hover {
+  border-image: linear-gradient(to bottom, #ffffff, #ffffff);
+}
+
+/* home service section ------------------------------------------------  */
+.service-hover-black {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.2s;
+}
+
+.service-hover-black:hover {
+  background: linear-gradient(to right, #dededed6, #aeaeae76);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s;
+}
+
+.service-hover-white {
+  color: rgba(0, 0, 0, 0.75);
+  transition: all 0.2s;
+}
+
+.service-hover-white:hover {
+  background: linear-gradient(to right, #212020c7, #3d3d3d76);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s;
+}
+
+
+@media (max-width: 768px) {
+  body.menu-open {
+    overflow: hidden;
+  }
+}
